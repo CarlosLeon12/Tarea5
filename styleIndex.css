@@ -1,0 +1,73 @@
+
+/*-----------------dividir div--------------*/
+
+.container {
+  display: flex;
+}
+
+.div1 {
+  flex: 1;
+  padding: 10px;
+}
+
+.div2 {
+  flex: 10;
+  padding: 10px;
+}
+
+/*----------------------------Pedidos-----------------------*/
+.area{
+  height: 785px;
+  border-radius: 10px;
+  border: 2.5px solid #627d8d;
+}
+
+button{
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2.5px solid #000000;
+  cursor: pointer;
+}
+
+.imgBotones{
+  height: 45px;
+  width: 45px;
+}
+
+.botonesIzquierda{
+  height: 80px;
+  width: 80px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+/*--------------------------div derecho----------------------*/
+.labelPrecio{
+  border-radius: 5px;
+  font-size: 30px;
+  margin-left: 50px;
+  color: white;
+}
+
+.datosCliente{
+  background-color: transparent;
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin-left: 125px;
+}
+
+.consumido{
+  border: 2.5px solid #020202;
+  height: 540px;
+  border-radius: 10px;
+}
+
+.labelCosumo{
+  text-align: center;
+  font-size: 35px;
+}
+

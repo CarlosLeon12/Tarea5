@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleIndex.css">
+
+    <script>
+        function mostrarAlerta() {
+            alert("¡SU PAGO SE REALIZO CON EXITO!");
+        }
+        </script>
+
+</head>
+
+<!----------------------fondo de pantalla------------------------------------>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .fullscreen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+</style>
+
+<!-----------------------------cuerpo de la pagina---------------------------->
+<body>
+    <!----------------imagen de fondo----------------------------------------->
+    <img class="fullscreen-image" src="https://th.bing.com/th/id/R.aa78f28d95743e2da55e3ead52b3e113?rik=R0mXcEhEbqSOjQ&pid=ImgRaw&r=0" alt="">
+
+    <!--------------div principal---------------------------->
+    <div class="container">
+        
+        <!--------------div izquierdo------------------------>
+        <div class="div1">
+            <fieldset class="area">
+
+                <!-----------comida---------------->
+                
+                <button id="pizza" class="botonesIzquierda"><img class="imgBotones" src="iconos/pizza.png" alt=""></button>
+                <button id="tacos" class="botonesIzquierda"><img class="imgBotones" src="iconos/tacos.png" alt=""></button>
+                <button id="hamburguesa" class="botonesIzquierda"><img class="imgBotones" src="iconos/burgger.png" alt=""></button>
+                
+
+                <!-----------bebida----------------->
+                <button id="soda" class="botonesIzquierda"><img class="imgBotones" src="iconos/soda.png" alt=""></button>
+                <button id="cerveza" class="botonesIzquierda"><img class="imgBotones" src="iconos/beer.png" alt=""></button>
+                <button id="cafe" class="botonesIzquierda"><img class="imgBotones" src="iconos/cafe.png" alt=""></button>
+
+                <!-------------------cobro de los alimentos-------------------------------->
+                <button class="botonesIzquierda"><img class="imgBotones" src="iconos/cobro.png" onclick="mostrarAlerta()" alt=""></button>
+                <button id="agregar" class="botonesIzquierda"><img class="imgBotones" src="iconos/mas.png" alt=""></button>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.getElementById('agregar').addEventListener('click', function() {
+                            location.reload(); // Esto recargará la página
+                        });
+                    });
+            
+                    
+                </script>
+
+            </fieldset>
+        </div>
+
+        <!--------------div derecho-------------------------->
+        <div class="div2">
+            <fieldset class="area">
+                <div style="margin-top: 15px;">
+                    <label class="labelPrecio" for="">Pizza Q80.00</label>
+                    <label class="labelPrecio" for="">Taco Q25.00</label>
+                    <label class="labelPrecio" for="">Hamburguesa Q30.00</label>
+                    <label class="labelPrecio" for="">Soda Q8.00</label>
+                    <label class="labelPrecio" for="">Cerveza Q10.00</label>
+                    <label class="labelPrecio" for="">Cafe Q5.00</label>
+                </div>
+
+               <div style="margin-top: 45px;">
+                <input class="datosCliente" type="text" placeholder="Nombres">
+                <input class="datosCliente" type="text" placeholder="Apellido">
+                <input class="datosCliente" type="text" placeholder="Nit">
+               </div>
+
+               <div style="margin-top: 80px;">
+                <fieldset class="consumido">
+                    <div class="labelCosumo" style="margin-top: 25px;">
+                        <h2>Pedido Actual</h2>
+                        <ul id="pedido-list"></ul>
+                        <p> Total: $<span id="total">0</span></p>
+                    </div>
+
+                </fieldset>
+               </div>
+              
+            </fieldset>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
